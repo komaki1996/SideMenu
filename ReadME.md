@@ -12,7 +12,7 @@ SideMenu.swiftをプロジェクト内に保存し参照
 以下パラメータ入力で実装
 
 ### 左から右
-```
+```Swift
  SideMenu(view:testView(), //表示したいViewを指定
           width: UIScreen.main.bounds.width/2, //メニュー横幅
           height:UIScreen.main.bounds.height, //メニュー縦幅

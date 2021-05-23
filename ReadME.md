@@ -23,7 +23,7 @@ SideMenu.swiftをプロジェクト内に保存し参照
 ```
 
 ### 右から左
-```
+```Swift
  SideMenu(view:testView(), //表示したいViewを指定
           width: UIScreen.main.bounds.width/2, //メニュー横幅
           height:UIScreen.main.bounds.height, //メニュー縦幅
@@ -34,7 +34,7 @@ SideMenu.swiftをプロジェクト内に保存し参照
 ```
 
 ### 上から下
-```
+```Swift
  SideMenu(view:testView(), //表示したいViewを指定
           width: UIScreen.main.bounds.width, //メニュー横幅
           height:UIScreen.main.bounds.height/2, //メニュー縦幅
@@ -44,7 +44,7 @@ SideMenu.swiftをプロジェクト内に保存し参照
                                  
 ```
 ### 下から上
-```
+```Swift
  SideMenu(view:testView(), //表示したいViewを指定
           width: UIScreen.main.bounds.width, //メニュー横幅
           height:UIScreen.main.bounds.height/2, //メニュー縦幅

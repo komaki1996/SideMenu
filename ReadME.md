@@ -9,6 +9,12 @@ README
 ## 実装方法
 SideMenu.swiftをプロジェクト内に保存し参照
 
+
+ボタンのBool変数
+```SwiftUI
+@State private var isOpen:Bool = false
+```
+
 以下パラメータ入力で実装
 
 ### 左から右

@@ -11,7 +11,7 @@ SideMenu.swiftをプロジェクト内に保存し参照
 
 
 ボタンのBool変数
-```SwiftUI
+```Swift
 @State private var isOpen:Bool = false
 ```
 

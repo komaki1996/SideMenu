@@ -1,3 +1,5 @@
+import SwiftUI
+
 enum menuType {
     case fromLeft
     case fromRight

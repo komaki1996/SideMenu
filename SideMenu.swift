@@ -8,12 +8,12 @@ enum menuType {
 }
 //サイドメニュー
 struct SideMenu<Content: View>: View {
-    let view: Content //表示させるViewを指定
-    let width: CGFloat //メニューの幅を指定
-    let height:CGFloat //メニューの高さを指定
+    let view: Content   //表示させるViewを指定
+    let width: CGFloat  //メニューの幅を指定
+    let height:CGFloat  //メニューの高さを指定
     let menuType: menuType //type指定(.fromLeft, .fromRight, .fromTop)
     @Binding var isOpen: Bool //BtnのBoolを引数とする
-    
+
     var body: some View {
         ZStack {
             GeometryReader { _ in
@@ -25,16 +25,7 @@ struct SideMenu<Content: View>: View {
             .onTapGesture {
                 self.isOpen.toggle()
             }
-            if menuType == .fromTop {
-                VStack() {
-                    view
-                        .frame(width: self.width, height: self.height)
-                        .background(Color.white)
-                        .animation(.default)
-                        .offset(y: self.isOpen ? 0 : -self.height)
-                    Spacer()
-                }
-            } else if menuType == .fromLeft {
+            if menuType == .fromLeft {
                 HStack() {
                     view
                         .frame(width: self.width, height: self.height)
@@ -43,7 +34,7 @@ struct SideMenu<Content: View>: View {
                         .offset(x: self.isOpen ? 0 : -self.width)
                     Spacer()
                 }
-                
+
             } else if menuType == .fromRight {
                 HStack() {
                     Spacer()
@@ -52,6 +43,15 @@ struct SideMenu<Content: View>: View {
                         .background(Color.white)
                         .animation(.default)
                         .offset(x: self.isOpen ? 0 : +self.width)
+                }
+            } else if menuType == .fromTop {
+                VStack() {
+                    view
+                        .frame(width: self.width, height: self.height)
+                        .background(Color.white)
+                        .animation(.default)
+                        .offset(y: self.isOpen ? 0 : -self.height)
+                    Spacer()
                 }
             } else if menuType == .fromBottom {
                 VStack() {
@@ -63,6 +63,7 @@ struct SideMenu<Content: View>: View {
                         .offset(y: self.isOpen ? 0 : +self.height)
                 }
             } else {}
-        }
+        }.ignoresSafeArea(.all)
     }
 }
+
